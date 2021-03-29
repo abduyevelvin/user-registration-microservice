@@ -1,21 +1,14 @@
-package com.userservice.entity;
+package com.mailservice.dto;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-
-@Entity
-@Table(name = "user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
     private Long id;
 
-    @NotNull
     private String username;
-    @NotNull
+
     private String password;
 
-    public User() {}
+    public UserDTO() {
+    }
 
     public Long getId() {
         return id;
